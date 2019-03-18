@@ -60,9 +60,12 @@
         <script src="js/app/models/Negociacao.js"></script>
         <script>
             var n1 = new Negociacao(new Date(), 5, 700);
-            var volume = n1.obtemVolume();
+            var volume = n1.volume;
             console.log(volume);
-            console.log(n1.getData());
+            //console.log(n1.getData());
+            //agora posso usar direto a propriedade, como se fosse
+            console.log(n1.data);
+            console.log(n1.valor);
         </script>
     </table>
     
