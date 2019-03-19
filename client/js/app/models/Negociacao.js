@@ -4,6 +4,8 @@ class Negociacao {
         this._data = data;
         this._quantidade = quantidade;
         this._valor = valor;
+        //congelando a instancia para que não possa alterar as propriedades
+        Object.freeze(this);
     }
     //adicionando metodos, agora com o atalho utilizando get
     get volume() {
