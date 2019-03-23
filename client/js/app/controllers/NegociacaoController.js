@@ -28,16 +28,9 @@ O ideial é utilizar no construtor para não precisar ficar percorrendo o DOM to
        let data = new Date(...this._inputData
                 .value
                 .split('-')
-                .map(function(item, indice) {
-                    if(indice == 1) {
-                        return item - 1;
-                    }
-                    return item;
-                    //outra forma é somente com um return item - indice % 2;
-                })
+                //criando arrow function
+                .map((item, indice) => item - indice % 2)
                 );
-       //console.log(data);
-       console.log(typeof(data));
 
         let negociacao = new Negociacao(data, this._inputQuantidade.value, this._inputValor.value);
 
