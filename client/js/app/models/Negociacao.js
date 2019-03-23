@@ -3,7 +3,7 @@ class Negociacao {
     constructor(data, quantidade, valor) {
         //this._data = data;
         //adicionando programação defensiva
-        this.data = new Date(data.getTime());
+        this._data = new Date(data.getTime());
         this._quantidade = quantidade;
         this._valor = valor;
         //congelando a instancia para que não possa alterar as propriedades
