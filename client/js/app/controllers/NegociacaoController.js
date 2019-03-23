@@ -17,7 +17,11 @@ O ideial é utilizar no construtor para não precisar ficar percorrendo o DOM to
 
         //para descobrir o tipo de dado
         console.log(typeof(this._inputData.value));
-        
+
+        //para resolver o problema da data, podemos fazer de varias maneiras..
+        //expressão regular
+        let data = new Date(this._inputData.value.replace(/-/g, ','));
+
         let negociacao = new Negociacao(this._inputData.value, this._inputQuantidade.value, this._inputValor.value);
 
         
