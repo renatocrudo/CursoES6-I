@@ -1,7 +1,9 @@
 class Negociacao {
     //Deixando os atributos somente leitura, encapsulamento. Só por convenção
     constructor(data, quantidade, valor) {
-        this._data = data;
+        //this._data = data;
+        //adicionando programação defensiva
+        this.data = new Date(data.getTime());
         this._quantidade = quantidade;
         this._valor = valor;
         //congelando a instancia para que não possa alterar as propriedades
@@ -13,7 +15,9 @@ class Negociacao {
     }
 
     get data() {
-        return this._data;
+        //vamos colocar a programação defensiva
+        //return this._data;
+        return new Date(this._data.getTime());
     }
 
     get quantidade() {
